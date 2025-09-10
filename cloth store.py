@@ -94,13 +94,14 @@ def delete1():
     print("\nDeleted")
     my.close()
     mydb.close()
-
-mydb=mysql.connector.connect(host="localhost",user="root",passwd="ritikasingh",database="Cloth")
-my=mydb.cursor()
-my.execute("select * from store")
-k=my.fetchall()
-for a in k:
-    print(a)
-    my.close()
-    mydb.close()
+def display1():
+    mydb=mysql.connector.connect(host="localhost",user="root",passwd="ritikasingh",database="Cloth")
+    my=mydb.cursor()
+    my.execute("select * from store")
+    k=my.fetchall()
+    for a in k:
+        print(a)
+        my.close()
+        mydb.close()
 menu()
+
